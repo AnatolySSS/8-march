@@ -1,4 +1,9 @@
+import { randNumber } from "../lib/randNumber";
+import posterImg from "../../../assets/video-poster.webp"
+
 export function VideoGreetingSection() {
+  const MAX_NUMBER = 3;
+
   return (
     <section
       className="video-card"
@@ -16,9 +21,10 @@ export function VideoGreetingSection() {
         <video
           className="video-card__video"
           controls
-          poster="https://images.pexels.com/photos/931162/pexels-photo-931162.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          poster={posterImg}
+          onPlay={(e) => e.currentTarget.parentElement.classList.add('playing')}
         >
-          <source src="/videos/video.mp4" type="video/mp4" />
+          <source src={`/videos/video_${randNumber(MAX_NUMBER)}.mp4`} type="video/mp4" />
           Ваш браузер не поддерживает воспроизведение видео.
         </video>
         {/* <iframe
