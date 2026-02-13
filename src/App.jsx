@@ -11,7 +11,12 @@ function App() {
 
   return (
     <>
-      <div className="app" style={{ opacity: showIntro ? 0 : 1, transition: 'opacity 1s ease' }}>
+      <div className="app" style={{ 
+          filter: showIntro ? 'blur(1px)' : 'blur(0px)',
+          transform: showIntro ? 'scale(1.1)' : 'scale(1)',
+          opacity: showIntro ? 0 : 1,
+          transition: 'all 2s ease'
+        }}>
         <div className="app__inner">
           <div className="app__content">
             <HolidayLandingPage />
