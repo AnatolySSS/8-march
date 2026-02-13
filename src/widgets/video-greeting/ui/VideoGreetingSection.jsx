@@ -2,7 +2,7 @@ import { randNumber } from "../lib/randNumber";
 import posterImg from "../../../assets/video-poster.webp"
 
 export function VideoGreetingSection() {
-  const MAX_NUMBER = 3;
+  const MAX_NUMBER = 4;
 
   return (
     <section
