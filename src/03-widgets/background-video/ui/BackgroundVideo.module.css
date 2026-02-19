@@ -1,0 +1,11 @@
+.backgroundVideo {
+  position: fixed; /* или absolute */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* сохраняет пропорции и заполняет экран */
+  z-index: -1;      /* чтобы видео было позади контента */
+  transform: scale(1.1); /* увеличиваем на 20% */
+  transform-origin: top center;
+}

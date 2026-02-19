@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(203, 126, 153, 0.4);
+  font-size: 12px;
+  color: #9c6f87;
+}
+
+.footer__noteStrong {
+  font-weight: 600;
+}

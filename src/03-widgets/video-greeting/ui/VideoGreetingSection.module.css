@@ -1,0 +1,126 @@
+.videoCard {
+  background: radial-gradient(circle at 10% 0%, #fff3e0 0, transparent 55%),
+    radial-gradient(circle at 90% 100%, #fce4ec 0, transparent 55%),
+    rgba(255, 255, 255, 0.96);
+  border-radius: 22px;
+  padding: 18px 18px 16px;
+  box-shadow:
+    0 12px 30px rgba(140, 90, 118, 0.15),
+    0 0 0 1px rgba(247, 143, 179, 0.18);
+  position: relative;
+  overflow: hidden;
+}
+
+.videoCard__label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #b0356a;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.videoCard__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(76, 175, 80, 0.06);
+  color: #2e7d32;
+}
+
+.videoCard__statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, #a5d6a7, #43a047);
+}
+
+.videoCard__frame {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: radial-gradient(circle at 0 0, #ffe0f0 0, transparent 60%),
+    radial-gradient(circle at 100% 100%, #ffecb3 0, transparent 60%),
+    #fbeaf3;
+}
+
+.videoCard__frame::before,
+.videoCard__frame::after {
+  content: '';
+  position: absolute;
+  border-radius: 999px;
+  border: 1px solid rgba(240, 98, 146, 0.35);
+}
+
+.videoCard__frame::before {
+  width: 120px;
+  height: 120px;
+  top: -40px;
+  right: -40px;
+}
+
+.videoCard__frame::after {
+  width: 90px;
+  height: 90px;
+  bottom: -30px;
+  left: -20px;
+}
+
+.videoCard__video {
+  width: 100%;
+  display: block;
+  border: none;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: transparent;
+}
+
+.videoCard__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+
+.playing .videoCard__overlay{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.videoCard__overlayRing {
+  width: 70px;
+  height: 70px;
+  border-radius: 999px;
+  border: 1px solid rgba(253, 216, 53, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 20%, #fffde7 0, transparent 70%);
+}
+
+.videoCard__overlayRingInner {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  border: 1px solid rgba(240, 98, 146, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.videoCard__overlayRingInner svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: #e91e63;
+}

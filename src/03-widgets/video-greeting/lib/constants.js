@@ -1,0 +1,1 @@
+export const MAX_VIDEO_GREETING_COUNT = 3;
