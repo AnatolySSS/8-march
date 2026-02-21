@@ -1,15 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, ReactNode, JSX } from "react";
 import { BackgroundVideo } from "@/03-widgets";
 import styles from "./AppLayout.module.css";
 
-export const AppLayout = ({ children }) => {
+type AppLayoutProps = {
+  children: ReactNode; // обязательные вложенные элементы
+};
+
+export const AppLayout = ({ children }: AppLayoutProps): JSX.Element => {
   const [showIntro, setShowIntro] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowIntro(false);
-    }, 1000);
-
+    const timer = setTimeout(() => setShowIntro(false), 1000);
     return () => clearTimeout(timer);
   }, []);
 
