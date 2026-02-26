@@ -1,16 +1,89 @@
-# React + Vite
+# 8‑March Project (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**8‑March** — одностраничное React‑приложение, подготовленное к международному женскому дню. Проект выполнен на *Vite* + *React* с поддержкой TypeScript, модульного CSS и набором настраиваемых виджетов: фоновые видео, приветственный блок, раздел благодарностей, видеоприветы и футер.
 
-Currently, two official plugins are available:
+Основная цель — демонстрация простого, но эффектного landing‑page с адаптивным дизайном и минимальной зависимостью от сторонних библиотек.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📁 Структура проекта
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+/8-march
+├─ package.json           # зависимости и npm-скрипты
+├─ tsconfig.json          # конфигурация TypeScript
+├─ vite.config.ts         # настройки Vite
+└─ src
+   ├─ 01-app              # корневой React-компонент и макет
+   ├─ 02-pages            # страницы (holiday-landing и т.п.)
+   ├─ 03-widgets          # переиспользуемые виджеты (фон, hero, видео и т.д.)
+   ├─ 04-shared           # общие ассеты (изображения, шрифты)
+   └─ main.tsx            # точка входа
+```
 
-## Expanding the ESLint configuration
+Каждая папка внутри `03-widgets` содержит собственный компонент и стили; `02-pages/holiday-landing` реализует главную страницу праздника.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Быстрый старт
+
+### Требования
+
+- Node.js (>=18)
+- npm или yarn
+
+### Установка
+
+```bash
+cd /path/to/8-march
+npm install     # или yarn
+```
+
+### Разработка
+
+Запустить дев‑сервер с HMR:
+
+```bash
+npm run dev
+```
+
+Откройте [http://localhost:5173](http://localhost:5173) в браузере — изменения будут применяться в реальном времени.
+
+### Сборка и предпросмотр
+
+```bash
+npm run build      # создаёт папку dist
+npm run preview    # локально обслуживает собранный сайт
+```
+
+### Линтинг
+
+```bash
+npm run lint
+```
+
+---
+
+## ⚙️ Конфигурация и технологии
+
+- **Vite** в качестве сборщика
+- **React 19** с функциональными компонентами и хуками
+- **TypeScript 5** для типизации
+- **ESLint** + `@typescript-eslint` в качестве линтера
+- Модульный CSS (файлы `*.module.css`)
+
+---
+
+## 📝 Развертывание
+
+Собранный каталог `dist` можно размещать на любом статическом хостинге (Netlify, GitHub Pages, Vercel и т.п.). Полезно предварительно проверить:
+
+```bash
+npm run preview
+```
+
+---
+
+Если у вас появились идеи по расширению проекта или возникли вопросы — просто откройте issue.
+
+Приятной разработки! 🎉
