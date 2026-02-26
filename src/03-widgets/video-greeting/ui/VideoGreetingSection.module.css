@@ -81,14 +81,7 @@
 }
 
 .videoCard__overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  transition: opacity 0.5s ease;
-  opacity: 1;
+  display: none;
 }
 
 .playing .videoCard__overlay{
@@ -123,4 +116,17 @@
   height: 16px;
   fill: none;
   stroke: #e91e63;
+}
+
+@media (min-width: 768px) {
+  .videoCard__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+  }
 }
