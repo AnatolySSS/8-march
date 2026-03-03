@@ -1,1 +1,1 @@
-export const MAX_VIDEO_GREETING_COUNT = 22;
+export const MAX_VIDEO_GREETING_COUNT = 27;
