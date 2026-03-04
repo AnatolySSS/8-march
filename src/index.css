@@ -15,6 +15,7 @@ body,
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI',
     sans-serif;
   color: #29151f;
+  text-align: justify;
 }
 
 body {
@@ -37,6 +38,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+    text-align: left;
   }
 }
 
