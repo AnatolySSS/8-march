@@ -19,9 +19,9 @@ export function HeroSection() {
         которую вы создаёте каждый день.
       </p>
 
-      <p className={styles.heroNote}>
+      {/* <p className={styles.heroNote}>
         Пусть вокруг будет больше красоты, честности и спокойствия, а рядом — люди, которые по-настоящему вас ценят.
-      </p>
+      </p> */}
     </header>
   );
 }
