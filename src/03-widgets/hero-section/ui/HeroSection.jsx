@@ -9,7 +9,7 @@ export function HeroSection() {
       </p>
 
       <h1 id="page-title" className={styles.heroTitle}>
-        Видеопоздравление
+        Видеопоздравления
         <br />
         <span>с 8&nbsp;Марта</span>
       </h1>
